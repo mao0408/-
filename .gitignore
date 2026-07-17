@@ -179,3 +179,11 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Local desktop-app dependencies and generated previews
+mac-ui/node_modules/
+mac-ui/src-tauri/target/
+ui-preview*.png
+
+# Local runtime data and screenshots
+user_data/
