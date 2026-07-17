@@ -1,0 +1,36 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "productName": "微信回复助手",
+  "version": "0.1.0",
+  "identifier": "com.maocrm.wechat-reply-assistant",
+  "build": {
+    "frontendDist": "../ui",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": ""
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "微信回复助手",
+        "width": 1440,
+        "height": 920,
+        "minWidth": 1080,
+        "minHeight": 720,
+        "center": true,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["app", "dmg"],
+    "icon": ["icons/icon.png"],
+    "resources": ["../../dist/backend"],
+    "macOS": {
+      "minimumSystemVersion": "12.0"
+    }
+  }
+}

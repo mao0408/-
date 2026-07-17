@@ -1,0 +1,28 @@
+{
+  "config_path": "C:\\Users\\lenovo\\AppData\\Roaming\\WeChatStyleReplyAssistant\\settings.json",
+  "api_provider": "zhipu",
+  "api_key": "",
+  "base_url": "https://open.bigmodel.cn/api/paas/v4",
+  "model": "glm-4-flash-250414",
+  "vision_provider": "zhipu",
+  "vision_api_key": "",
+  "vision_base_url": "https://open.bigmodel.cn/api/paas/v4",
+  "vision_model": "glm-4v-flash",
+  "custom_headers": "{\"Authorization\":\"Bearer {api_key}\",\"Content-Type\":\"application/json\"}",
+  "custom_body": "{\"model\":\"{model}\",\"messages\":{messages_json}}",
+  "custom_response_path": "choices.0.message.content",
+  "reply_source_mode": "model_memory",
+  "ocr_engine": "rapidocr",
+  "training_mode": true,
+  "auto_recognize": false,
+  "managed_auto_reply": false,
+  "auto_reply_delay_seconds": 1.2,
+  "poll_interval_ms": 1200,
+  "capture_cooldown_seconds": 4.0,
+  "chat_area": {
+    "x_left": 0.31,
+    "x_right": 0.98,
+    "y_top": 0.09,
+    "y_bottom": 0.91
+  }
+}

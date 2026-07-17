@@ -1,0 +1,29 @@
+﻿聊小智便携版自检报告
+时间：2026-07-12 17:16:56
+系统：Windows-11-10.0.26200-SP0
+Python/打包运行时：3.13.14
+程序目录：D:\微信回复助手
+[通过] xls 表格训练导入：xlrd 2.0.2
+
+[通过] API 请求库：requests 2.34.2
+[通过] 截图和键鼠自动化：pyautogui 0.9.54
+[通过] 剪贴板发送：pyperclip 1.11.0
+[通过] 微信窗口检测：win32gui
+[通过] 图片处理：PIL 12.3.0
+[通过] OpenCV 图像处理：cv2 5.0.0
+[通过] ONNX OCR 推理运行库：onnxruntime 1.27.0
+[通过] RapidOCR 本地中文 OCR：rapidocr_onnxruntime
+
+[通过] OCR 模型文件：已找到
+       - ch_PP-OCRv3_det_infer.onnx (2432880 bytes)
+       - ch_PP-OCRv3_rec_infer.onnx (10690752 bytes)
+       - ch_ppocr_mobile_v2.0_cls_infer.onnx (585532 bytes)
+[通过] OCR 引擎初始化：RapidOCR 可以启动
+[通过] 屏幕截图权限：成功截取 40x40
+[通过] 设置目录可写：D:\微信回复助手\user_data
+[信息] 文本生成接口：zhipu
+[信息] Base URL：https://open.bigmodel.cn/api/paas/v4
+[信息] 模型：glm-4-flash-250414
+[信息] API Key 状态：未填写
+[信息] 记忆文件位置：D:\微信回复助手\user_data\memory.json
+[通过] 微信窗口检测：微信，1786x1281

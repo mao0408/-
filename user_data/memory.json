@@ -1,0 +1,16 @@
+{
+  "style_summary": "短句、微信口语、基本不用表情、表达直接、少客服腔。",
+  "examples": [
+    {
+      "partner": "聊天记录训练",
+      "cue": "[对方] 福宝放哪里",
+      "reply": "这个放客厅正南方就行",
+      "source": "chat_zip_training",
+      "created_at": "2026-07-17T05:31:39+00:00",
+      "conversation_hash": "1358fa61e3f558c9282060e2e1d0cb86d1033f2d"
+    }
+  ],
+  "common_phrases": {
+    "这个放客厅正南方就行": 2
+  }
+}

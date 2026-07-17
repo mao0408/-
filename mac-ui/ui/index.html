@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>微信回复助手</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">M</div>
+          <div>
+            <div class="brand-title">微信回复助手</div>
+            <div class="brand-subtitle">AI REPLY ASSISTANT</div>
+          </div>
+        </div>
+        <div class="conversation-title">
+          <span class="status-dot"></span>
+          <strong id="conversationTitle">当前聊天：等待聊天窗口</strong>
+          <span class="muted">仅处理当前聊天内容</span>
+        </div>
+        <div class="window-tools">
+          <button class="icon-button" title="快捷键">⌨</button>
+          <button class="icon-button active" title="置顶">⬆</button>
+          <button class="icon-button" title="更多">⋯</button>
+          <button class="icon-button" title="最小化">−</button>
+          <button class="icon-button" title="关闭">×</button>
+        </div>
+      </header>
+
+      <section class="modebar">
+        <button class="mode-card selected" data-toggle="training">
+          <span class="mode-icon">◎</span>
+          <span><strong>训练模式</strong><small>人工确认并积累回复习惯</small></span>
+          <span class="check">✓</span>
+        </button>
+        <button class="mode-card selected" data-toggle="auto">
+          <span class="mode-icon">◉</span>
+          <span><strong>自动识别</strong><small>识别当前聊天并生成回复</small></span>
+          <span class="check">✓</span>
+        </button>
+        <button class="mode-card" data-toggle="managed">
+          <span class="mode-icon">◌</span>
+          <span><strong>托管模式</strong><small>生成后自动发送回复</small></span>
+          <span class="check"></span>
+        </button>
+        <label class="source-select">
+          <small>回复来源</small>
+          <select id="sourceMode">
+            <option value="model_memory">大模型 + 个人记忆</option>
+            <option value="model">大模型</option>
+            <option value="memory">个人记忆</option>
+          </select>
+        </label>
+        <div class="appearance">
+          <button class="icon-button" title="夜间模式">☾</button>
+          <button class="icon-button active" title="浅色模式">☀</button>
+          <button class="icon-button" id="settingsButton" title="设置">⚙</button>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="status-column">
+          <div class="status-card">
+            <span class="status-icon">⌁</span>
+            <div><small>OCR</small><strong>本地识别</strong></div>
+            <span class="status-light" id="ocrStatus"></span>
+          </div>
+          <div class="status-card">
+            <span class="status-icon">✦</span>
+            <div><small>AI</small><strong>接口状态</strong></div>
+            <span class="status-light" id="aiStatus"></span>
+          </div>
+          <div class="progress-card">
+            <span><span class="status-dot"></span> 当前进度</span>
+            <strong id="progressText">等待识别聊天窗口</strong>
+            <div class="progress-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </aside>
+
+        <section class="conversation-panel panel">
+          <div class="panel-header">
+            <div><small>CURRENT CONVERSATION</small><h1 id="panelTitle">当前聊天：等待聊天窗口</h1></div>
+            <button class="primary-button" id="recognizeButton">⌁ 识别当前聊天</button>
+          </div>
+          <div class="context-scroll" id="contextView">
+            <div class="empty-context">点击“识别当前聊天”读取微信窗口内容</div>
+          </div>
+          <div class="panel-footer"><span class="status-dot"></span><span id="statusText">等待聊天窗口</span></div>
+        </section>
+
+        <section class="reply-panel panel">
+          <div class="panel-header">
+            <div><small>SMART REPLY DOCK</small><h1>候选回复</h1></div>
+            <div class="source-badge">✓ 来源：<span id="sourceText">未生成</span></div>
+          </div>
+          <div class="reply-list" id="replyList"></div>
+          <div class="reply-composer">
+            <textarea id="replyInput" placeholder="输入或修改回复内容"></textarea>
+            <div class="composer-actions">
+              <button class="square-button" id="regenerateButton" title="重新生成">↻</button>
+              <button class="square-button" id="copyButton" title="复制">⧉</button>
+              <button class="primary-button send-button" id="sendButton">➤ 发送到当前聊天</button>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer-nav">
+        <span><span class="status-dot"></span> <span id="footerStatus">聊天内容未变化</span></span>
+        <nav><button>⌁ 回复记忆</button><button>▣ 训练记录</button><button>？ 使用说明</button><button id="footerSettings">⚙ 设置</button></nav>
+      </footer>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
